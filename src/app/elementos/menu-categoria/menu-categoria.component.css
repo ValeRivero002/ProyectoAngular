@@ -1,0 +1,46 @@
+/* MenuCategoriaComponent styles */
+.menu-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .menu-categoria {
+    width: 100%;
+    max-width: 50vw;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2%;
+  }
+  h3
+  {
+    text-align: center;
+  }
+  
+  .menu-categoria ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Hace que los elementos de la lista se muestren en línea */
+  }
+  
+  .menu-categoria li {
+    padding: 10px;
+    cursor: pointer;
+    color: #333;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-right: 10%; /* Espacio entre elementos */
+  }
+  
+  .menu-categoria li:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último elemento */
+  }
+  .menu-categoria li:first-child {
+    margin-left: 4%; /* Elimina el margen derecho del último elemento */
+  }
+  
+  .menu-categoria li:hover {
+    background-color: #f0f0f0;
+  }
+  

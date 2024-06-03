@@ -1,0 +1,11 @@
+<div class="menu-container">
+    <div class="menu-categoria">
+        <h3>Categorías</h3> 
+      <ul>
+        <li *ngFor="let category of categories" (click)="onCategorySelected(category)">
+          {{ category }}
+        </li>
+      </ul>
+    </div>
+  </div>
+  

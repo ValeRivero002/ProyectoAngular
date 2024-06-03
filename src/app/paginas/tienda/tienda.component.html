@@ -1,0 +1,19 @@
+<div>
+  <app-menu-categoria (categorySelected)="onCategorySelected($event)"></app-menu-categoria>
+</div>
+<section>
+  <form class="search-form" (ngSubmit)="onSearch()">
+    <input type="text" placeholder="Buscar producto por nombre" [(ngModel)]="searchTerm" name="searchTerm">
+    <button class="primary" type="submit">Buscar</button>
+  </form>
+</section>
+<section class="results">
+  <div *ngIf="listaFiltradaDeProductos.length > 0; else noResults" class="contenedor-productos">
+    <div *ngFor="let product of listaFiltradaDeProductos; trackBy: trackById">
+      <app-producto [producto]="product"></app-producto>
+    </div>
+  </div>
+  <ng-template #noResults>
+    <p>No se encontraron productos.</p>
+  </ng-template>
+</section>

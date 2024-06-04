@@ -27,8 +27,8 @@
   width: 40%;
   height: 5%;
   font-size: 20px;
-  color: #fff;
-  background-color: #007bff;
+  color: #171515;
+  background-color:  beige;
   border-radius: 5%;
   margin-right: 10px;
   transition: background-color 0.3s;
@@ -37,5 +37,5 @@
 }
 
 a:hover {
-  background-color: #0056b3;
+  background-color:  beige;
 }

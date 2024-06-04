@@ -1,0 +1,34 @@
+.modal-content {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .modal-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .modal-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #666;
+  }
+  
+  .modal-content button {
+    background-color: #3f51b5;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .modal-content button:hover {
+    background-color: #303f9f;
+  }
+  

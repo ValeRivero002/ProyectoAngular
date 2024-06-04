@@ -1,6 +1,49 @@
-<div class="container">
-    <h1>Bienvenido a Nuestra Tienda</h1>
-    <p>Explora nuestra selección de productos de alta calidad.</p>
-    <a routerLink="/tienda" class="btn btn-primary">Ver Productos</a>
-  </div>
+<div class="banner">
+  <h1>Bienvenido a nuestra tienda unisex</h1>
+  <p>Encuentra joyas, ropa y tecnología de alta calidad para todos</p>
+  <button mat-raised-button color="primary" (click)="navegarATienda()">Explorar productos</button>
+</div>
+
+<div class="productos-destacados">
+  <h2>Productos Destacados</h2>
   
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Joyas</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="././../../../assets/joyas.png" alt="Joyas">
+    <mat-card-actions>
+      <button mat-button color="primary" (click)="navegarACategoria('jewelery')">Ver más</button>
+    </mat-card-actions>
+  </mat-card>
+  
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Ropa de Hombre</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="./../../../assets/ropa.jpg" alt="Ropa">
+    <mat-card-actions>
+      <button mat-button color="primary" (click)="navegarACategoria('men\'s clothing')">Ver más</button>
+    </mat-card-actions>
+  </mat-card>
+  
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Tecnología</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="./../../../assets/tecnologia.jpg" alt="Tecnología">
+    <mat-card-actions>
+      <button mat-button color="primary" (click)="navegarACategoria('electronics')">Ver más</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<div class="container">
+  <div class="redes-sociales">
+    <h2>Síguenos en Redes Sociales</h2>
+    <a href="https://www.facebook.com/" class="icon-facebook"></a>
+    <a href="https://www.whatsapp.com/?lang=es_LA" class="icon-whatsapp"></a>
+    <a href="https://www.instagram.com/" class="icon-instagram"></a>
+    <a href="https://www.youtube.com/" class="icon-youtube"></a>
+  </div>
+</div>

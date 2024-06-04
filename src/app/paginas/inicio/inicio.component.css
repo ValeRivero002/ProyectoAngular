@@ -1,21 +1,127 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 50px 20px;
-    text-align: center;
-  }
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color:beige;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e599cf;
+}
+
+mat-icon {
+  font-size: 24px;
+}
+
+.redes-sociales {
+  margin-top: 30px;
+}
+
+.redes-sociales h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.redes-sociales a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  margin: 0 10px;
+}
+
+/* Icons */
+.icon-facebook {
+  background-image: url('./../../../assets/facebook-icon.png');
+}
+
+.icon-whatsapp {
+  background-image: url('./../../../assets/whatsapp-icon.png');
+}
+
+.icon-instagram {
+  background-image: url('./../../../assets/instagram-icon.png');
+}
+
+.icon-youtube {
+  background-image: url('./../../../assets/youtube-icon.png');
+}
+/* General */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Banner */
+.banner {
+  background: url('../../../assets/banner.jpg') no-repeat center center/cover;
+  color: black;
+  border-color: black;
+  text-align: center;
+  padding: 100px 20px;
+  border-radius: 8px;
+  margin-bottom: 50px;
+}
+
+.banner h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
   
-  .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-  
-  .btn:hover {
-    background-color: #0056b3;
-  }
-  
+}
+
+.banner p {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+}
+
+.banner button {
+  font-size: 1rem;
+}
+
+/* Productos Destacados */
+.productos-destacados {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.productos-destacados h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+mat-card {
+  display: inline-block;
+  margin: 20px;
+  max-width: 30%;
+  transition: transform 0.3s ease;
+  background-color: beige;
+  align-items: center;
+}
+
+mat-card:hover {
+  transform: translateY(-10px);
+}
+
+mat-card img {
+  height: 200px;
+  object-fit: cover;
+}

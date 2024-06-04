@@ -1,22 +1,26 @@
 <div class="contenedor-carrito">
-    <h2>Carrito de Compras</h2>
-    <div *ngIf="carrito.length > 0; else carritoVacio">
-      <div *ngFor="let producto of carrito; trackBy: trackById" class="producto">
-        <img [src]="producto.image" alt="{{producto.title}}">
-        <div class="detalle">
-          <h3>{{producto.title}}</h3>
-          <p>Precio: ${{producto.price}}</p>
-          <p>Cantidad: 1</p>
-          <button (click)="eliminarProducto(producto.id)">Eliminar</button>
-        </div>
+  <h2>Carrito de Compras</h2>
+  <div *ngIf="carrito.length > 0; else carritoVacio">
+    <div *ngFor="let item of carrito; trackBy: trackById" class="producto">
+      <img [src]="item.producto.image" alt="{{item.producto.title}}">
+      <div class="detalle">
+        <h3>{{item.producto.title}}</h3>
+        <p>Precio: ${{item.producto.price}}</p>
+        <p>Cantidad: 
+          <input type="number" [value]="item.cantidad" (input)="actualizarCantidad(item.producto.id, $event)">
+        </p>
+        <button (click)="eliminarProducto(item.producto.id)">Eliminar</button>
       </div>
-      <div class="total">
-        <h3>Total a pagar: ${{total}}</h3>
-      </div>
-      <button (click)="limpiarCarrito()">Limpiar Carrito</button>
     </div>
-    <ng-template #carritoVacio>
-      <p>El carrito está vacío.</p>
-    </ng-template>
+    <div class="total">
+      <h3>Total a pagar: ${{total}}</h3>
+    </div>
+    <button class="btn-limpiar" (click)="limpiarCarrito()">Limpiar Carrito</button>
+    <button class="btn-confirmar" (click)="redirectToMetodoPago()">Confirmar</button>
+
+    
   </div>
-  
+  <ng-template #carritoVacio>
+    <p>El carrito está vacío.</p>
+  </ng-template>
+</div>

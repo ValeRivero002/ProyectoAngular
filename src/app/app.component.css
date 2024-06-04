@@ -1,21 +1,7 @@
 .active{
     color: aqua;
 }
-.topnav {
-    background-color: #333;
-    overflow: hidden;
-  }
- 
-  /* Style the links inside the navigation bar */
-  .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
- 
+
   /* Change the color of links on hover */
   .topnav a:hover {
     background-color: #ddd;
@@ -27,3 +13,40 @@
     background-color: #b98fb2;
     color: white;
   }
+
+  .topnav {
+    display: flex;
+
+    align-items: center;
+    background-color: #333;
+    overflow: hidden;
+    padding: 0 20px; /* Añadir un poco de espacio a los lados */
+  }
+  
+  .topnav a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .carrito-icono {
+    margin-left: auto; /* Mover el icono del carrito a la derecha */
+  }
+  
+  .carrito-imagen {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .badge {
+    position: absolute;
+    top: -5px;
+    right: 10px;
+    padding: 5px 10px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+  }
+  

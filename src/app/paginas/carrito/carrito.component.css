@@ -1,20 +1,26 @@
 .contenedor-carrito {
     padding: 2rem;
+
   }
   
   .contenedor-carrito h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
+    text-align: center;
   }
-  
+  .contenedor-carrito h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
   .producto {
     display: flex;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
   }
   
   .producto img {
-    max-width: 100px;
+    max-width: 150px;
     margin-right: 1rem;
   }
   
@@ -30,10 +36,11 @@
   }
   
   button {
+    margin-left: 30%;
     margin-top: 1rem;
     padding: 0.5rem 1rem;
     background-color: #dc3545;
-    color: white;
+    color: black;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -42,13 +49,34 @@
   button:hover {
     background-color: #c82333;
   }
-  
+  .total button{
+    text-align: center;
+
+  }
   .detalle button {
-    background-color: #007bff;
+    background-color:beige;
     margin-top: 0.5rem;
   }
   
   .detalle button:hover {
-    background-color: #0056b3;
+    background-color: beige;
+  }
+  .btn-confirmar {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #10a729;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    margin-left: 20%;
   }
   
+  .btn-confirmar:hover {
+    background-color:  #89cf95;
+  }
+  .btn-limpiar {
+
+    color: white;
+  }

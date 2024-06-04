@@ -1,6 +1,7 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { ProductoComponent } from '../../elementos/producto/producto.component';
 import { Producto } from '../../interfaces/product';
 import { ProductoService } from '../../services/producto.service';
@@ -18,15 +19,21 @@ import { MenuCategoriaComponent } from '../../elementos/menu-categoria/menu-cate
   templateUrl: './tienda.component.html',
   styleUrls: ['./tienda.component.scss']
 })
-export class TiendaComponent {
+export class TiendaComponent implements OnInit {
   listaDeProductos: Producto[] = [];
   listaFiltradaDeProductos: Producto[] = [];
   productoService: ProductoService = inject(ProductoService);
+  route: ActivatedRoute = inject(ActivatedRoute);
   selectedCategory: string | null = null;
   searchTerm: string = '';
 
-  constructor() {
-    this.loadProducts();
+  constructor() {}
+
+  ngOnInit() {
+    this.route.paramMap.subscribe(params => {
+      this.selectedCategory = params.get('categoria');
+      this.loadProducts();
+    });
   }
 
   loadProducts(): void {

@@ -2,6 +2,12 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CarritoService } from '../../services/carrito.service';
 import { Producto } from '../../interfaces/product';
+import { Router } from '@angular/router';
+
+interface CarritoItem {
+  producto: Producto;
+  cantidad: number;
+}
 
 @Component({
   selector: 'app-carrito',
@@ -12,16 +18,16 @@ import { Producto } from '../../interfaces/product';
 })
 export class CarritoComponent {
   carritoService: CarritoService = inject(CarritoService);
-  carrito: Producto[] = [];
+  carrito: CarritoItem[] = [];
   total: number = 0;
 
-  constructor() {
+  constructor(private router: Router) {
     this.carrito = this.carritoService.obtenerCarrito();
     this.calcularTotal();
   }
 
   calcularTotal(): void {
-    this.total = this.carrito.reduce((sum, producto) => sum + producto.price, 0);
+    this.total = this.carrito.reduce((sum, item) => sum + item.producto.price * item.cantidad, 0);
   }
 
   limpiarCarrito(): void {
@@ -36,7 +42,20 @@ export class CarritoComponent {
     this.calcularTotal();
   }
 
-  trackById(index: number, item: Producto): number {
-    return item.id;
+  actualizarCantidad(id: number, event: Event): void {
+    const inputElement = event.target as HTMLInputElement;
+    const cantidadNumerica = Number(inputElement.value);
+    if (!isNaN(cantidadNumerica) && cantidadNumerica > 0) {
+      this.carritoService.actualizarCantidad(id, cantidadNumerica);
+      this.carrito = this.carritoService.obtenerCarrito();
+      this.calcularTotal();
+    }
+  }
+  redirectToMetodoPago(): void {
+    this.router.navigate(['/metodo-pago']);
+  }
+
+  trackById(index: number, item: CarritoItem): number {
+    return item.producto.id;
   }
 }

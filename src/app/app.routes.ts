@@ -6,6 +6,7 @@ import { ContactanosComponent } from './paginas/contactanos/contactanos.componen
 import { PaginaNoEncontradaComponent } from './paginas/pagina-no-encontrada/pagina-no-encontrada.component';
 import { DetallesComponent } from './paginas/detalles/detalles.component';
 import { CarritoComponent } from './paginas/carrito/carrito.component';
+import { MetodoPagoComponent } from './paginas/metodo-pago/metodo-pago.component';
 
 export const routes: Routes = [
     { path: 'inicio', component: InicioComponent},
@@ -14,6 +15,7 @@ export const routes: Routes = [
     { path: 'carrito', component: CarritoComponent },
     { path: 'nosotros', component:NosotrosComponent},
     { path: 'contactanos', component:ContactanosComponent},
+    { path: 'metodo-pago', component:MetodoPagoComponent},
     { path: '', redirectTo: 'inicio', pathMatch:'full' }, //pathMatch:'full'= coincidencia tiene que ser exacta con path 
     { path: '**', component:PaginaNoEncontradaComponent},
 

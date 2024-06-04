@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Método de Pago</h1>
+  <form class="payment-form" fxLayout="column" fxLayoutGap="20px">
+    <mat-form-field appearance="outline">
+      <label>Número de Tarjeta: </label>
+      <input matInput type="text" placeholder="1234 5678 9012 3456" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <label>Fecha de Vencimiento:  </label>
+      <input matInput type="text" placeholder="MM/YY" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <label>CVV: </label>
+      <input matInput type="text" placeholder="123" required>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="openModal()">Confirmar Pago</button>
+
+  </form>
+</div>

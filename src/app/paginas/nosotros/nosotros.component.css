@@ -1,0 +1,56 @@
+/* Estilo general para el cuerpo de la página */
+body, html {
+    font-family: Arial, sans-serif; /* Fuente predeterminada */
+    color: #333; /* Color de texto principal */
+    margin: 0;
+    padding: 0;
+  
+  }
+  
+  /* Contenedor principal */
+  .nosotros-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Sección de nosotros */
+  .nosotros-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    margin-bottom: 40px;
+  }
+  
+  /* Texto */
+  .nosotros-text {
+    grid-column: 1 / 2;
+  }
+  
+  /* Imágenes */
+  .nosotros-images {
+    grid-column: 2 / 3;
+  }
+  
+  /* Títulos */
+  .titulo-grande{
+    font-size: 32px;
+    font-weight: bold;
+    color: #333; /* Color de texto */
+    text-transform: uppercase; /* Convertir texto a mayúsculas */
+    margin-bottom: 10px;
+  }
+  /* Párrafos */
+  .parrafo-mediano {
+    font-size: 18px;
+    color: #666; /* Color de texto */
+    line-height: 1.5; /* Espaciado entre líneas */
+  }
+  
+  /* Imágenes */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Alinear imágenes al centro */
+    margin: 0 auto; /* Centrar imágenes horizontalmente */
+  }

@@ -1,0 +1,20 @@
+<div *ngIf="reviews && reviews.length > 0">
+  <h3 class="reviews-title">Reviews</h3>
+  <div *ngFor="let review of reviews">
+    <div class="review-item">
+      <div class="user-info">
+        <img src="{{ review.photo_url }}" alt="User Photo">
+        <p><strong>{{ review.username }}</strong></p>
+      </div>
+      <div class="review-details">
+        <p>{{ review.comment }}</p>
+        <p>Rating: {{ review.rate }}/5</p>
+        <p>Created At: {{ review.created_at | date }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="reviews && reviews.length === 0">
+  <p>No reviews available for this product.</p>
+</div>

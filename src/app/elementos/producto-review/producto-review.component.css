@@ -1,0 +1,82 @@
+/* Estilo general para el contenedor de reviews */
+.review-container {
+  margin-top: 20px;
+}
+/* Estilo para el título de la sección de reviews */
+.reviews-title {
+  font-size: 24px; /* Tamaño grande para destacar */
+  font-weight: bold; /* Negrita para enfatizar */
+  margin-bottom: 15px; /* Espacio inferior para separación */
+  color: black; /* Color oscuro para legibilidad */
+  text-align: center; /* Alineación centrada para centrar el título */
+  text-transform: uppercase; /* Transformación a mayúsculas */
+  letter-spacing: 2px; /* Espaciado entre letras para mejor legibilidad */
+  margin-top: 5%;
+}
+
+
+/* Estilo para cada review individual */
+.review-item {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  overflow: hidden;
+  display: flex;
+}
+
+/* Estilo para la imagen de usuario */
+.review-item .user-info img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 30px;
+  object-fit: cover;
+}
+
+/* Estilo para el contenido del review */
+.review-item .review-details {
+  flex: 1;
+}
+
+/* Estilo para el nombre de usuario */
+.review-item .review-details p.username {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+/* Estilo para el comentario del review */
+.review-item .review-details p.comment {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Estilo para el rating del review */
+.review-item .review-details p.rating {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Estilo para la fecha de creación del review */
+.review-item .review-details p.created-at {
+  font-size: 12px;
+  color: #888;
+}
+
+/* Estilo para el mensaje de no hay reviews */
+.no-reviews-message {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+/* Estilo para el título de la sección de reviews */
+.reviews-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}

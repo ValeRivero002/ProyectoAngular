@@ -43,8 +43,12 @@ export class TiendaComponent implements OnInit {
           this.listaDeProductos = data;
           this.filtrarProductos();
         },
-        error => console.log('Hay un Error'),
-        () => console.log('Fin'),
+        error => {
+          console.error('Error al cargar productos por categoría:', error);
+        },
+        () => {
+          console.log('Carga de productos por categoría completa');
+        }
       );
     } else {
       this.productoService.obtenerTodosLosProductos().subscribe(
@@ -52,8 +56,12 @@ export class TiendaComponent implements OnInit {
           this.listaDeProductos = data;
           this.filtrarProductos();
         },
-        error => console.log('Hay un Error'),
-        () => console.log('Fin'),
+        error => {
+          console.error('Error al cargar todos los productos:', error);
+        },
+        () => {
+          console.log('Carga de todos los productos completa');
+        }
       );
     }
   }
@@ -76,6 +84,7 @@ export class TiendaComponent implements OnInit {
       this.listaFiltradaDeProductos = this.listaDeProductos;
     }
   }
+
   trackById(index: number, item: Producto): number {
     return item.id;
   }
